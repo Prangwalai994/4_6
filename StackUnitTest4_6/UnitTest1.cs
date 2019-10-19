@@ -41,6 +41,17 @@ namespace StackUnitTest4_6
         [Test]
         public void Pop_StackWithAFewObjects_ReturnObjectOnTheTop()
         {
+            //Arrage
+            var stack = new Stack<string>();
+            stack.Push("a");
+            stack.Push("b");
+            stack.Push("c");
+
+            //Act
+            var result = stack.Pop();
+
+            //Assert
+            Assert.That(result, Is.EqualTo("c"));
         }
         [Test]
         public void Pop_StackWithAFewObjects_RemoveObjectOnTheTop()
