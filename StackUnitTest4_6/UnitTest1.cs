@@ -78,7 +78,17 @@ namespace StackUnitTest4_6
         [Test]
         public void Peek_StackWithObjects_ReturnObjectOnTopOfTheStack()
         {
+            // Arrange 
+            var stack = new Stack<string>();
+            stack.Push("a");
+            stack.Push("b");
+            stack.Push("c");
 
+            // Act
+            stack.Pop();
+
+            // Assert
+            Assert.That(stack.Count,Is.EqualTo(2));
         }
         [Test]
         public void Peek_StackWithObjects_DoseNotRemoveTheObjectOnTopOfTheStack()
