@@ -85,15 +85,25 @@ namespace StackUnitTest4_6
             stack.Push("c");
 
             // Act
-            stack.Pop();
+            var result = stack.Peek();
 
             // Assert
-            Assert.That(stack.Count,Is.EqualTo(2));
+            Assert.That(result,Is.EqualTo("c"));
         }
         [Test]
         public void Peek_StackWithObjects_DoseNotRemoveTheObjectOnTopOfTheStack()
         {
+            // Arrange 
+            var stack = new Stack<string>();
+            stack.Push("a");
+            stack.Push("b");
+            stack.Push("c");
 
+            // Act
+            stack.Peek();
+
+            // Assert
+            Assert.That(stack.Count, Is.EqualTo(3));
         }
     }
 }
