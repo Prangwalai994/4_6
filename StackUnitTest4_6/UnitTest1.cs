@@ -56,6 +56,33 @@ namespace StackUnitTest4_6
         [Test]
         public void Pop_StackWithAFewObjects_RemoveObjectOnTheTop()
         {
+            //Arrage
+            var stack = new Stack<string>();
+            stack.Push("a");
+            stack.Push("b");
+            stack.Push("c");
+
+            //Act
+            stack.Pop();
+
+            //Assert
+            Assert.That(stack.Count, Is.EqualTo(2));
+        }
+        [Test]
+        public void Peek_EmptyStack_ThrowInvalidOperationException()
+        {
+            var stack = new Stack<string>();
+
+            Assert.That(() => stack.Peek(), Throws.InvalidOperationException);
+        }
+        [Test]
+        public void Peek_StackWithObjects_ReturnObjectOnTopOfTheStack()
+        {
+
+        }
+        [Test]
+        public void Peek_StackWithObjects_DoseNotRemoveTheObjectOnTopOfTheStack()
+        {
 
         }
     }
