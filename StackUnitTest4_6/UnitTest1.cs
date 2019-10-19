@@ -31,5 +31,21 @@ namespace StackUnitTest4_6
 
             Assert.That(stack.Count, Is.EqualTo(0));
         }
+        [Test]
+        public void Pop_EmptyStack_ThrowInvalidOperationException()
+        {
+            var stack = new Stack<string>();
+
+            Assert.That(() => stack.Pop(), Throws.InvalidOperationException);
+        }
+        [Test]
+        public void Pop_StackWithAFewObjects_ReturnObjectOnTheTop()
+        {
+        }
+        [Test]
+        public void Pop_StackWithAFewObjects_RemoveObjectOnTheTop()
+        {
+
+        }
     }
 }

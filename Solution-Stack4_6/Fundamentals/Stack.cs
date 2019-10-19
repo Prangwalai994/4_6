@@ -10,7 +10,7 @@ namespace Solution_Stack4_6.Fundamentals
     {
         private readonly List<T> _list = new List<T>();
 
-        public int Count => 1;
+        public int Count => _list.Count;
 
         public void Push(T obj)
         {
